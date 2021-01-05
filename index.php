@@ -13,7 +13,7 @@
     <table>
         <tr>
             <td>
-                <form method="post">
+                <form action="action.php" method="post">
                     <fieldset>
                         <legend>Thêm sinh viên</legend>
                         <label>
@@ -82,6 +82,35 @@
                             <th>Sửa</th>
                             <th>Xoá</th>
                         </tr>
+                        <?php include_once 'StudentManagement.php' ?>
+                        <?php include_once 'action.php' ?>
+                        <?php foreach ($this->students as $key=>$student): ?>
+                            <tr>
+                                <td><?php echo $key ?></td>
+                                <td><?php echo $student->code() ?></td>
+                                <td><?php echo $student->name() ?></td>
+                                <td><?php echo $student->gender() ?></td>
+                                <td><?php echo $student->class() ?></td>
+                                <td><?php echo $student->birth() ?></td>
+                                <td><?php echo $student->address() ?></td>
+                                <td><?php echo $student->phone() ?></td>
+                                <td><?php echo $student->identity() ?></td>
+                                <td>
+                                    <form action="edit.php" method="post" style="display: inline">
+                                        <input type="text" name="action" value="edit" hidden>
+                                        <input type="text" name="index" value="<?php echo $key?>" hidden>
+                                        <button>Edit</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="action.php" method="post" style="display: inline">
+                                        <input type="text" name="action" value="delete" hidden>
+                                        <input type="text" name="index" value="<?php echo $key?>" hidden>
+                                        <button>Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </table>
                 </fieldset>
             </td>
