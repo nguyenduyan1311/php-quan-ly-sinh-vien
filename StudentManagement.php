@@ -4,19 +4,24 @@
 class StudentManagement
 {
     public $students;
+    public static $fileName;
 
     public function __construct()
     {
         $this->students = [];
+        $this->fileName = "data.json";
     }
     public function add($student){
         $this->students[] = $student;
+        $this->saveData();
     }
     public function edit($index,$student){
         $this->students[$index] = $student;
+        $this->saveData();
     }
     public function delete($index){
         unset($this->students[$index]);
+        $this->saveData();
     }
     public function getIndex($index){
         return $this->students[$index];
