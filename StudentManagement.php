@@ -21,4 +21,19 @@ class StudentManagement
     public function getIndex($index){
         return $this->students[$index];
     }
+    public function getIndexByName($name){
+        foreach($this->students as $key=>$student){
+            $studentName = $student->getName();
+            if ($studentName == $name){
+                return $key;
+            }
+        }
+        return -1;
+    }
+    public function sortAZ(){
+        sort($this->students);
+    }
+    public function sortZA(){
+        rsort($this->students);
+    }
 }
