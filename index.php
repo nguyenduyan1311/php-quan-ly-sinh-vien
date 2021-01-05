@@ -47,6 +47,16 @@
                     </fieldset>
                 </form>
             </td>
+            <td>
+                <form action="index.php" method="post">
+                    <label>
+                        Tìm kiếm:
+                        <input type="text" name="name" placeholder="Họ và tên">
+                        <input type="text" name="action" value="search" hidden>
+                        <button>Search</button>
+                    </label>
+                </form><br>
+            </td>
         </tr>
     </table>
 </center>
