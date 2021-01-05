@@ -13,13 +13,10 @@
         <input type="text" name="action" value="update" hidden>
     </label>
     <label>
-        <input type="text" name="idOld" value="<?php echo $_POST['id']; ?>" hidden>
+        <input type="text" name="index" hidden>
     </label>
     <fieldset>
         <legend>Sửa thông tin về sinh viên</legend>
-        <label>
-            <input type="number" name="id" placeholder="STT">
-        </label><br>
         <label>
             <input type="text" name="name" placeholder="Họ và tên">
         </label><br>
@@ -52,7 +49,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $action = $_POST['action'];
-    $id = $_POST['id'];
+    $index = $_POST['index'];
+    $c = $_POST['code'];
     $name = $_POST['name'];
     $gender = $_POST['gender'];
     $class = $_POST['class'];
