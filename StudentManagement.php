@@ -36,4 +36,15 @@ class StudentManagement
     public function sortZA(){
         rsort($this->students);
     }
+    public function saveData(){
+        $data = [];
+        foreach ($this->students as $student){
+            $data[] = $student->toArray();
+        }
+        file_put_contents(self::$fileName,json_encode($data));
+    }
+    public function loadData(){
+        $data = json_decode(file_get_contents(self::$fileName));
+        $list = [];
+    }
 }
