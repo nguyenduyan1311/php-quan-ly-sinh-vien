@@ -66,6 +66,24 @@
                         <button>Sort</button>
                     </label>
                 </form><br>
+                <fieldset>
+                    <legend>Danh sách sinh viên</legend>
+                    <table>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã sinh viên</th>
+                            <th>Họ và tên</th>
+                            <th>Giới tính</th>
+                            <th>Lớp</th>
+                            <th>Ngày sinh</th>
+                            <th>Địa chỉ</th>
+                            <th>Số điện thoại</th>
+                            <th>Số CMND/thẻ căn cước</th>
+                            <th>Sửa</th>
+                            <th>Xoá</th>
+                        </tr>
+                    </table>
+                </fieldset>
             </td>
         </tr>
     </table>
