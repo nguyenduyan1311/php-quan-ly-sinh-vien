@@ -49,3 +49,15 @@
 </form>
 </body>
 </html>
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $action = $_POST['action'];
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $gender = $_POST['gender'];
+    $class = $_POST['class'];
+    $birth = $_POST['birth'];
+    $address = $_POST['address'];
+    $phone = $_POST['phone'];
+    $identity = $_POST['identity'];
+}
